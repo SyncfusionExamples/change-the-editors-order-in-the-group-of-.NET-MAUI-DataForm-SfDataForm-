@@ -6,13 +6,13 @@ namespace EditorOrderWithAttribute
     public class DataFormModel
     {
         [Display(GroupName = "General Information", Order = 1, Prompt = "Enter your last name")]
-        public string LastName { get; set; }
+        public string LastName { get; set; } = string.Empty;
 
         [Display(GroupName = "General Information", Order = 2)]
         public Gender Gender { get; set; }
 
         [Display(GroupName = "General Information", Order = 0, Prompt = "Enter your first name")]
-        public string FirstName { get; set; }
+        public string FirstName { get; set; } = string.Empty;
 
         [Display(GroupName = "Educational Information")]
         [DataFormDisplayOptions(RowOrder = 2)]
@@ -20,11 +20,11 @@ namespace EditorOrderWithAttribute
 
         [Display(GroupName = "Educational Information", Prompt = "Enter your degree")]
         [DataFormDisplayOptions(RowOrder = 0)]
-        public string Degree { get; set; }
+        public string Degree { get; set; } = string.Empty;
 
         [Display(GroupName = "Educational Information")]
         [DataFormDisplayOptions(RowOrder = 1)]
-        public string Branch { get; set; }
+        public string Branch { get; set; } = string.Empty;
     }
     public enum Gender
     {
