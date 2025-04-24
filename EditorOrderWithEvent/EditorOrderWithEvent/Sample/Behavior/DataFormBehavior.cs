@@ -12,7 +12,7 @@ namespace EditorOrderWithEvent
             dataForm.RegisterEditor("Branch", DataFormEditorType.ComboBox);
             dataForm.GenerateDataFormItem += OnGenerateDataFormItem;
         }
-        private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+        private void OnGenerateDataFormItem(object? sender, GenerateDataFormItemEventArgs e)
         {
             if (e.DataFormItem != null)
             {
@@ -49,8 +49,6 @@ namespace EditorOrderWithEvent
             {
                 dataForm.GenerateDataFormItem -= this.OnGenerateDataFormItem;
             }
-
-            dataForm = null;
         }
     }
 }
